@@ -1,0 +1,45 @@
+.Footer{
+    height: 350px;
+    background-color: #1A78E6;
+    display: flex;
+    color: white;
+    justify-content: center;
+    position: relative;
+    top: 1200px;
+    
+    
+
+    .Footercontainer{
+        width: 100%;
+        max-width: 1250px;
+        background-color: #1A78E6;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items:center ;
+        padding: 40px;
+        position: absolute;
+        top: 0px;
+        justify-content: center;
+
+        .subscribeinput{
+            .input{
+                height: 25px;
+                width: 300px;
+                border-radius: 5px;
+                padding: 10px;
+                border: none;
+            }
+            button{
+                background-color: turquoise;
+                border: none;
+                height: 45px;
+                width: 100px;
+                border-radius: 5px;
+                margin: 10px;
+            }
+        }
+        
+        
+    }
+}

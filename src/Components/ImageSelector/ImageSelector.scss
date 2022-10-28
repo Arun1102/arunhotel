@@ -1,0 +1,64 @@
+.ImageSelector{
+
+    height: 50px;
+    // background-color: #1A78E6;
+    display: flex;
+    color: white;
+    justify-content: center;
+
+    .ImageSelectorCont{
+        width: 100%;
+        max-width: 1200px;
+        // background-color: #1A78E6;
+        display: flex;
+        position: absolute;
+        gap: 40px;
+        align-items:center ;
+        padding: 20px;
+        justify-content: center;
+
+        .imgcon{
+            // width: 380px;
+            // height: 300px;
+            // border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                top:350px;
+
+
+                .pic1{
+                    position: absolute;
+                    top: 155px;
+                    left: 10px;
+                    color: black;
+                    
+                }
+
+               
+
+               
+                
+               
+
+                .pic2{
+                    position: absolute;
+                    top: 185px;
+                    left: 10px;
+                    color: grey;
+                }
+
+               
+
+
+            
+        }
+        .images{
+            width: 220px;
+            height: 150px;
+            border-radius: 10px;
+        }
+        
+    }
+
+}

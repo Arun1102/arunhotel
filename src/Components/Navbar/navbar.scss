@@ -1,0 +1,45 @@
+.navbar{
+    height: 50px;
+    background-color: #1A78E6;
+    display: flex;
+    color: white;
+    justify-content: center;
+    
+   
+    .navcontainer{
+        width: 100%;
+        max-width: 1300px;
+        background-color: #1A78E6;
+        display: flex;
+        justify-content: space-between;
+        align-items:center ;
+        padding: 20px;
+        .logo{
+            
+            
+        }
+
+        .buttons{
+            
+            color: red;
+            .regbutton{
+                margin: 20px;
+                color: #1A78E6;
+                border: none;
+                padding: 5px;
+            }
+
+            .logbutton{
+                color: #1A78E6;
+                border: none;
+                padding: 5px;
+            }
+        }
+
+
+        .lists{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

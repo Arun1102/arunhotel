@@ -1,0 +1,27 @@
+.Description{
+    // height: 50px;
+    // background-color: #1A78E6;
+    display: flex;
+    color: black;
+    justify-content: center;
+    position: relative;
+    
+
+    .descriptioncontainer{
+        width: 100%;
+        max-width: 1250px;
+        // background-color: #1A78E6;
+        display: flex;
+        gap: 40px;
+        align-items:center ;
+        padding: 20px;
+        position: absolute;
+        top: 290px;
+
+        h2{
+            position: absolute;
+            color: black;
+        }
+        
+    }
+}

@@ -1,0 +1,104 @@
+.Search{
+    height: 50px;
+    // background-color: darkblue;
+    display: flex;
+    color: black;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+
+    .searchcontainer{
+        width: 100%;
+        max-width: 1200px;
+        position: absolute;
+        top: -40px;
+        border: 5px solid orange;
+        display: flex;
+        gap: 40px;
+        align-items:center ;
+        padding: 20px;
+        background-color: white;
+        justify-content: space-between;
+
+        .listcontainer{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            // background-color: aqua;
+            width: 100%;
+            
+
+            .lists{
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                position: relative;
+                z-index: 999;
+                input{
+                    border: none;
+                    outline: none;
+                }
+            }
+
+            .containerRoom{
+                display: flex;
+                flex-direction: column;
+                background-color: #CFE4F2;
+                // align-items: center;
+                width: 250px;
+                height: 130px;
+                // justify-content: center;
+                gap: 20px;
+                position: absolute;
+                top: 60px;
+                left: 40px;
+                padding: 20px;
+
+                .container{
+                    display: flex;
+                    // background-color: green;
+                    justify-content: space-between;
+                    
+                    .container1{
+                        display: flex;
+                        gap: 20px;
+                        align-items: center;
+
+                        button{
+                            background-color: white;
+                            border:none;
+                            width: 30px;
+                            height: 30px;
+                        }
+                       
+                    }
+                    
+                }
+            }
+
+            .Dates{
+                position: absolute;
+                top: 60px;
+                height: 400px;
+                background-color: #BFE6FE;
+            }
+
+            
+
+
+            
+        }
+
+        .searchbutton{
+            background-color: #BFE6FE;
+            width: 90px;
+            height: 40px;
+            border: none;
+            border-radius: 10px;
+
+            &:hover{
+                background-color: turquoise;
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.Headertitle{
+    height: 190px;
+    background-color: #1A78E6;
+    display: flex;
+    color: white;
+    justify-content: center;
+    
+    .headertitlecon{
+        width: 100%;
+        max-width: 1300px;
+        background-color: #1A78E6;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 10px;
+
+        button{
+            height: 30px;
+            border: none;
+            background-color: turquoise;
+
+            &:hover{
+                background-color: #BFE6FE;
+            }
+
+        }
+    }
+}

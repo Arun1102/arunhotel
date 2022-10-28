@@ -1,0 +1,61 @@
+.HeaderImage{
+
+    height: 50px;
+    // background-color: #1A78E6;
+    display: flex;
+    color: white;
+    justify-content: center;
+
+    .headerimagecontainer{
+        width: 100%;
+        max-width: 1300px;
+        // background-color: #1A78E6;
+        display: flex;
+        position: absolute;
+        gap: 40px;
+        align-items:center ;
+        padding: 20px;
+        justify-content: center;
+
+        .imgcon{
+            // width: 380px;
+            // height: 300px;
+            // border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+
+
+                .pic1{
+                    position: absolute;
+                    top: 230px;
+                    left: 30px;
+                    
+                }
+
+               
+
+               
+                
+               
+
+                .pic2{
+                    position: absolute;
+                    top: 260px;
+                    left: 30px;
+                }
+
+               
+
+
+            
+        }
+        .images{
+            width: 390px;
+            height: 300px;
+            border-radius: 10px;
+        }
+        
+    }
+
+}

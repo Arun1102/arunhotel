@@ -1,0 +1,78 @@
+.BottomImage{
+
+    height: 50px;
+    // background-color: #1A78E6;
+    display: flex;
+    color: white;
+    justify-content: center;
+
+    .BottomImageContainer{
+        width: 100%;
+        max-width: 1300px;
+        // background-color: #1A78E6;
+        display: flex;
+        position: absolute;
+        gap: 40px;
+        align-items:center ;
+        padding: 20px;
+        justify-content: center;
+
+        .imgcon{
+            // width: 380px;
+            // height: 300px;
+            // border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                top:650px;
+
+
+                .pic1{
+                    position: absolute;
+                    top: 300px;
+                    left: 10px;
+                    color: black;
+                    
+                }
+
+               
+
+               
+                
+               
+
+                .pic2{
+                    position: absolute;
+                    top: 335px;
+                    left: 10px;
+                    color: grey;
+                }
+
+                .pic3{
+                    position: absolute;
+                    top: 375px;
+                    left: 10px;
+                    color: grey;
+                }
+
+                .pic4{
+                    position: absolute;
+                    top: 420px;
+                    left: 10px;
+                    color: grey;
+                }
+
+               
+
+
+            
+        }
+        .images{
+            width: 285px;
+            height: 250px;
+            border-radius: 10px;
+        }
+        
+    }
+
+}

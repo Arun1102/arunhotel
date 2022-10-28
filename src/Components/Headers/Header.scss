@@ -1,0 +1,39 @@
+.Header{
+
+    height: 50px;
+    background-color: #1A78E6;
+    display: flex;
+    color: white;
+    justify-content: center;
+    
+
+
+    .headercontainer{
+        width: 100%;
+        max-width: 1300px;
+        background-color: #1A78E6;
+        display: flex;
+        gap: 40px;
+        align-items:center ;
+        padding: 20px;
+
+        .lists{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 10px;
+
+        
+            &.select{
+                border-radius: 15px;
+                width: auto;
+                height: 20px;
+                border: 1px solid white;
+            }
+
+        }
+
+
+
+    }
+}
