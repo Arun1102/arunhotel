@@ -1,6 +1,7 @@
 import React from 'react'
 import Home from './Pages/Home/Home'
 import List from './Pages/List/List'
+import Hotel from './Pages/Hotel/Hotel'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 function App() {
   return (
@@ -10,7 +11,11 @@ function App() {
 
         <Route path='/'>
           <Route index element={<Home/>}/>
-          <Route path="hotels" element={<List/>}></Route>
+          <Route path="hotels">
+            <Route index element={<List/>}/>
+            <Route path=":ID" element ={<Hotel/>} />
+
+          </Route>
 
 
 

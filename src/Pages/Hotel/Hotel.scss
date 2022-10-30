@@ -1,0 +1,198 @@
+.Hotel{
+    display: flex;
+    justify-content: center;
+
+    .HotelContainer{
+        width: 100%;
+        max-width: 1250px;
+        height: auto;
+        display: flex;
+        // background-color: green;
+        flex-direction: column;
+
+        .top{
+                width: 1250px;
+                display: flex;
+                justify-content: space-between;
+                // background-color: yellow;
+                // padding: 10px;
+                
+            .lefttop{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 20px;
+
+                .title{
+                    color:#1978E6;
+                            font-weight: 1000;
+                            font-size: 20px;
+                }
+
+                .adds{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    
+
+                        .iconss{
+                           
+                        }
+                        .add{
+
+                        }
+                    
+                }
+                
+
+                .loc{
+                    color: lightseagreen;
+                    font-weight: 1000;
+                }
+
+                .info{
+                    color: green;
+                    font-weight: 700;
+                            font-size: 15px;
+                }
+            }
+
+            .righttop{
+                margin-top: 20px;
+                button{
+                    background-color: #1978E6;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 5px;
+                    color: white;
+                }
+            }
+        }
+
+        .bottom{
+            padding-top: 10px;
+            display: flex;
+            // align-items: center;
+            flex-direction: column;
+            .imgrow1{
+                    display: flex;
+                    
+                    gap:10px;
+
+                    .imgs{
+                        
+                        width: 408px;
+                        height: 250px;
+                        border-radius: 5px;
+                    }
+            }
+            .imgrow2{
+                display: flex;
+                gap:10px;
+
+                .imgs{
+                    margin-top: 5px;
+                    width: 408px;
+                    height: 250px;
+                    border-radius: 5px;
+                }
+            }
+        }
+
+        .descriptionbox{
+            display: flex;
+            margin-top: 10px;
+            gap: 10px;
+            .leftdescript{
+                display: flex;
+                flex-direction: column;
+                flex: 6;
+                gap: 10px;
+
+            }
+            .rightdescript{
+                display: flex;
+                flex-direction: column;
+                flex: 2;
+                background-color: lightcyan;
+                gap: 10px;
+                padding: 10px;
+                border-radius: 5px;
+                
+
+                span{
+                    font-size: 17px;
+                    font-weight: 900;
+                }
+
+                button{
+                                font-size: larger;
+                                background-color: #1978E6;
+                                border: none;
+                                border-radius: 5px;
+                                width: 100%;
+                                height: 40px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                }
+            }
+        }
+
+
+    }
+
+
+
+    
+
+    
+}
+
+.Footers{
+    height: 340px;
+    background-color: #1A78E6;
+    
+    display: flex;
+    color: white;
+    justify-content: center;
+    // position: relative;
+    // top: 1200px;
+    
+    
+
+    .Footercontainer{
+        width: 100%;
+        max-width: 1250px;
+        background-color: #1A78E6;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items:center ;
+        padding: 40px;
+        // position: absolute;
+        // top: 0px;
+        justify-content: center;
+
+        .subscribeinput{
+            .input{
+                height: 25px;
+                width: 300px;
+                border-radius: 5px;
+                padding: 10px;
+                border: none;
+            }
+            button{
+                background-color: turquoise;
+                border: none;
+                height: 45px;
+                width: 100px;
+                border-radius: 5px;
+                margin: 10px;
+            }
+        }
+        
+        
+    }
+}
