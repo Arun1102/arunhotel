@@ -1,5 +1,6 @@
 import React from 'react'
 import Home from './Pages/Home/Home'
+import List from './Pages/List/List'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
 
         <Route path='/'>
           <Route index element={<Home/>}/>
-          
+          <Route path="hotels" element={<List/>}></Route>
 
 
 

@@ -60,6 +60,7 @@ function Search() {
               moveRangeOnFirstSelection={false}
               ranges={state}
               className="Dates"
+              minDate={new Date()}
               
             />
           }
