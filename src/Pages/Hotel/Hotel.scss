@@ -70,34 +70,82 @@
             }
         }
 
+        .slider{
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 1250px;
+            height: 60vh;
+            background-color: rgba(0, 0, 0, 0.613);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    	    align-items: center;
+            
+            .sliderimg{
+                width: 70%;
+                height: 60vh;
+            }
+
+            .cancel{
+                position: absolute;
+                margin-right: 40px;
+                font-size: 80px;
+                top: 0;
+                right: 0;
+                color: black;
+            }
+        }
+
         .bottom{
             padding-top: 10px;
             display: flex;
-            // align-items: center;
-            flex-direction: column;
-            .imgrow1{
-                    display: flex;
+            gap: 10px;
+            
+            
+
+            .div1{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 5px;
+            
+                .div2{
+                    width: 33%;
                     
-                    gap:10px;
 
                     .imgs{
+                        width: 100%;
+                        object-fit: cover;
+                        cursor: pointer;
                         
-                        width: 408px;
-                        height: 250px;
-                        border-radius: 5px;
+                        
                     }
-            }
-            .imgrow2{
-                display: flex;
-                gap:10px;
-
-                .imgs{
-                    margin-top: 5px;
-                    width: 408px;
-                    height: 250px;
-                    border-radius: 5px;
                 }
             }
+            // .imgrow1{
+            //         display: flex;
+                    
+            //         gap:10px;
+
+            //         .imgs{
+                        
+            //             width: 408px;
+            //             height: 250px;
+            //             border-radius: 5px;
+            //         }
+            // }
+            // .imgrow2{
+            //     display: flex;
+            //     gap:10px;
+
+            //     .imgs{
+            //         margin-top: 5px;
+            //         width: 408px;
+            //         height: 250px;
+            //         border-radius: 5px;
+            //     }
+            // }
         }
 
         .descriptionbox{

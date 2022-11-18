@@ -1,11 +1,61 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Navbar from '../../Components/Navbar/Navbar'
 import Header from '../../Components/Headers/Header'
 import './Hotel.scss'
 import PlaceIcon from '@mui/icons-material/Place';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import CancelPresentationIcon from '@mui/icons-material/CancelPresentation';
 // import Footer from '../../Components/Footer/Footer'
 import { positions } from '@mui/system';
+import { Google } from '@mui/icons-material';
+import { keyboard } from '@testing-library/user-event/dist/keyboard';
+import { useSubmit } from 'react-router-dom';
 function Hotel() {
+
+
+    const photo = [
+          {
+            src: "https://cf.bstatic.com/xdata/images/hotel/max1280x900/261707778.jpg?k=56ba0babbcbbfeb3d3e911728831dcbc390ed2cb16c51d88159f82bf751d04c6&o=&hp=1",
+          },
+          {
+            src: "https://cf.bstatic.com/xdata/images/hotel/max1280x900/261707367.jpg?k=cbacfdeb8404af56a1a94812575d96f6b80f6740fd491d02c6fc3912a16d8757&o=&hp=1",
+          },
+          {
+            src: "https://cf.bstatic.com/xdata/images/hotel/max1280x900/261708745.jpg?k=1aae4678d645c63e0d90cdae8127b15f1e3232d4739bdf387a6578dc3b14bdfd&o=&hp=1",
+          },
+          {
+            src: "https://cf.bstatic.com/xdata/images/hotel/max1280x900/261707776.jpg?k=054bb3e27c9e58d3bb1110349eb5e6e24dacd53fbb0316b9e2519b2bf3c520ae&o=&hp=1",
+          },
+          {
+            src: "https://cf.bstatic.com/xdata/images/hotel/max1280x900/261708693.jpg?k=ea210b4fa329fe302eab55dd9818c0571afba2abd2225ca3a36457f9afa74e94&o=&hp=1",
+          },
+          {
+            src: "https://cf.bstatic.com/xdata/images/hotel/max1280x900/261707389.jpg?k=52156673f9eb6d5d99d3eed9386491a0465ce6f3b995f005ac71abc192dd5827&o=&hp=1",
+          },
+    ]
+
+    const [open,setOpen] = useState(false);
+    const [number,setNumber] = useState(0);
+    const handleopen = (i)=>{
+        setNumber(i);
+        setOpen(true);
+    }
+
+    const slidernext = (direction)=>{
+        let newSlide;
+        if(direction === "l"){
+           newSlide =  number === 0 ? 5 : number - 1
+        }else if (direction === "r"){
+            newSlide = number === 5 ? 0 : number + 1
+        }
+
+        setNumber(newSlide)
+    }
+
+    
+
+
   return (
     <>
     <Navbar/>
@@ -27,17 +77,27 @@ function Hotel() {
                     <button> Reserve or Book Now!</button>
                 </div>
             </div>
+            {open &&
+            <div className="slider">
+                <ChevronLeftIcon style={{fontSize:"50px"}} onClick={()=>slidernext("l")}/>
+            <img src={photo[number].src} alt='pic1' className='sliderimg'/>
+                <CancelPresentationIcon className='cancel' onClick={()=>setOpen(!open)}/>
+                <ChevronRightIcon style={{fontSize:"50px"}} onClick={()=>slidernext("r")}/>
+            </div>
+            }
+
             <div className="bottom">
-                <div className="imgrow1">
-                    <img className='imgs' src="https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"/>
-                    <img className='imgs' src="https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"/>
-                    <img className='imgs' src="https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"/>
-                </div>
-                <div className="imgrow2">
-                <img className='imgs' src="https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"/>
-                    <img className='imgs' src="https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"/>
-                    <img className='imgs' src="https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"/>
-                </div>
+               
+                <div className="div1">
+                    
+                    {photo.map((photos,i)=>(
+                        <div className="div2">
+                    <img className='imgs' src={photos.src} id={photos.id} onClick={()=>handleopen(i)}/>
+                    </div>
+                ))}
+                    </div>
+                
+                
             </div>
 
             <div className="descriptionbox">
