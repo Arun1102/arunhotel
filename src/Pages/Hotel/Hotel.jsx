@@ -7,10 +7,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import CancelPresentationIcon from '@mui/icons-material/CancelPresentation';
 // import Footer from '../../Components/Footer/Footer'
-import { positions } from '@mui/system';
-import { Google } from '@mui/icons-material';
-import { keyboard } from '@testing-library/user-event/dist/keyboard';
-import { useSubmit } from 'react-router-dom';
+
 function Hotel() {
 
 
