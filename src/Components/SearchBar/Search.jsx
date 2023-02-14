@@ -7,7 +7,10 @@ import { DateRange } from 'react-date-range';
 import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import {format} from 'date-fns'
+import { useNavigate } from 'react-router-dom';
 function Search() {
+
+  const [destination,setDestination] = useState("");
 
   const [state, setState] = useState([
     {
@@ -37,6 +40,13 @@ function Search() {
     })
   }
 
+  const navigate = useNavigate()
+
+  const HandleSearch = ()=>{
+    navigate("/hotels", {state:{destination,state,room}})
+  }
+
+
 
   
   
@@ -48,7 +58,7 @@ function Search() {
           <form className='listcontainer'>
           <div className="lists">
             <LocalHotelIcon/>
-            <input type="text" name="search" placeholder='Where are you going? '/>
+            <input type="text" name="search" placeholder='Where are you going? ' onChange={(e)=> setDestination(e.target.value)}/>
           </div>
           <div className="lists" >
             <CalendarMonthIcon />
@@ -106,8 +116,9 @@ function Search() {
             }
           </div>
             
-
-            <button className='searchbutton'>Search</button>
+            
+            <button className='searchbutton' onClick={HandleSearch}>Search</button>
+            
             </form>
         </div>
     </div>
