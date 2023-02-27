@@ -15,14 +15,16 @@ const location = useLocation();
 const [destination,setDestination] = useState(location.state.destination)
 const [date, setDate] =  useState(location.state.state)
 const [option, setOption] =  useState(location.state.room)
+const [min, setMin] = useState(undefined);
+const [max, setMax] = useState(undefined);
 console.log(destination)
 
   const {data,loading,reFetch} = useFetch(`/hotel?city=${destination}`)
-  const datas = [{
-    title:"Arun test Hotel",
-    distance:"100m",
-    type:"Apartmenet"
-  }]
+  // const datas = [{
+  //   title:"Arun test Hotel",
+  //   distance:"100m",
+  //   type:"Apartmenet"
+  // }]
 
 
   
@@ -37,8 +39,10 @@ console.log(destination)
 
   const [open,setOpen] = useState(false)
 
-  const handleClick = () => {
+  const handleClick = (e) => {
     reFetch();
+    console.log("refetch clicked")
+    
   };
 
   return (
@@ -51,13 +55,15 @@ console.log(destination)
         <h3>Search</h3>
         <h5>Destination</h5>
         <input className='destin' type="text" onChange={(e)=>setDestination(e.target.value)} placeholder={destination}/>
+        {/* <input className='destin' type="text"  placeholder={destination}/> */}
         <h5>Check-in date</h5>
         <span className='labelspan' onClick={()=>{setOpen(!open);}} >{`${format(date[0].startDate,"dd/MM/yyyy")} to ${format(date[0].endDate,"dd/MM/yyyy")}`}</span>
         {open &&
         <DateRange
 
               editableDateInputs={true}
-              onChange={item => setState([item.selection])}
+              onChange={(item) => setDate([item.selection])}
+              // onChange={item => setState([item.selection])}
               moveRangeOnFirstSelection={false}
               ranges={state}
               className="Dates"
@@ -70,23 +76,28 @@ console.log(destination)
           {/* <div className="values"></div> */}
           <div className="valuelist">
             <span>Min price (per night)</span>
-            <span className='inputs'>values</span>
+            {/* <span className='inputs'>values</span> */}
+            <input type="number" onChange={(e) => setMin(e.target.value)} min={100} className="lsOptionInput" />
           </div>
           <div className="valuelist">
             <span>Max price (per night)</span>
-            <span className='inputs'>0</span>
+            {/* <span className='inputs'>0</span> */}
+            <input type="number" onChange={(e) => setMax(e.target.value)} min={200} max={2000} className="inputs" />
           </div>
           <div className="valuelist">
             <span>Adult</span>
-            <span className='inputs'>{option.adult}</span>
+            {/* <span className='inputs'>{option.adult}</span> */}
+            <input type="number" className="inputs" min={1} placeholder={option.adult}/>
           </div>
           <div className="valuelist">
             <span>Children</span>
-            <span className='inputs'>{option.children}</span>
+            {/* <span className='inputs'>{option.children}</span> */}
+            <input type="number" className="inputs" min={0} placeholder={option.children}/>
           </div>
           <div className="valuelist">
             <span>Room</span>
-            <span className='inputs'>{option.room}</span>
+            {/* <span className='inputs'>{option.room}</span> */}
+            <input type="number" className="inputs" min={1} placeholder={option.room}/>
           </div>
 
           <button className='searchbutton' onClick={handleClick} > Search </button>
